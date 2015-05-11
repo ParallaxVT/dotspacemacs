@@ -167,7 +167,9 @@ layers configuration."
   (evil-leader/set-key "or" 'rotate-text)
   (evil-leader/set-key "os" 'sort-lines)
   (evil-leader/set-key "ow" 'save-buffer)
-
+  (setq initial-scratch-message
+        (concat ";; Initialization successful, welcome to "
+                (substring (emacs-version) 0 16) ".")) ;; New scratch buffer text
   (custom-set-faces
    '(org-agenda-calendar-event ((t (:foreground "Orange"))))
    '(org-agenda-date           ((t (:foreground "SteelBLue1"))))
