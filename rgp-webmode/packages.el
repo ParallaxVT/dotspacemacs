@@ -16,6 +16,5 @@ which require an initialization must be listed explicitly in the list.")
             web-mode-css-indent-offset 4
             web-mode-enable-css-colorization t)
       (add-hook 'web-mode-hook #'(lambda () (yas-activate-extra-mode 'html-mode)
-                                   (yas-activate-extra-mode 'css-mode)
-                                   (evil-leader/set-key "t" 'web-mode-comment-or-uncomment)))))
-  )
+                                   (yas-activate-extra-mode 'css-mode))))
+    ))
