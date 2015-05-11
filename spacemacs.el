@@ -170,6 +170,7 @@ layers configuration."
   (setq initial-scratch-message
         (concat ";; Initialization successful, welcome to "
                 (substring (emacs-version) 0 16) ".")) ;; New scratch buffer text
+  (global-prettify-symbols-mode 1)                ;; Display a lambda symbol itstead of the word
   (custom-set-faces
    '(org-agenda-calendar-event ((t (:foreground "Orange"))))
    '(org-agenda-date           ((t (:foreground "SteelBLue1"))))
