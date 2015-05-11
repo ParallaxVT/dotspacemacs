@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: <krpano version="1.19">
+# key: krp9
+# binding: direct-keybinding
+# --
+<krpano version="1.19">
+$0
+</krpano>
