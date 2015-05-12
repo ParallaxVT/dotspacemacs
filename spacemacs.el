@@ -175,6 +175,7 @@ layers configuration."
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;; Show file path in the title bar if available. Buffer name otherwise
   (menu-bar-mode 1)                                            ;; Show menu bar
   (add-to-list 'exec-path "C:/msys64/usr/bin/")                ;; Add git.exe to the exec-path
+  (remove-hook 'org-mode-hook 'org-bullets-mode)               ;; Disable image bullet points. Doesn't work added to rgp-org layer
   (custom-set-faces
    '(org-agenda-calendar-event ((t (:foreground "Orange"))))
    '(org-agenda-date           ((t (:foreground "SteelBLue1"))))
