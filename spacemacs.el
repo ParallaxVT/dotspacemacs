@@ -172,6 +172,7 @@ layers configuration."
                 (substring (emacs-version) 0 16) ".")) ;; New scratch buffer text
   (global-prettify-symbols-mode 1)                ;; Display a lambda symbol itstead of the word
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;;  Show file path in the title bar if available. Buffer name otherwise
+  (menu-bar-mode 1)                                  ;; Show menu bar
   (custom-set-faces
    '(org-agenda-calendar-event ((t (:foreground "Orange"))))
    '(org-agenda-date           ((t (:foreground "SteelBLue1"))))
