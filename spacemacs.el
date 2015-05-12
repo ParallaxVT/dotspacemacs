@@ -27,6 +27,7 @@
      rgp-dired+
      rgp-elmacro
      rgp-eshell
+     rgp-flyspell
      rgp-helm
      rgp-ido
      rgp-layer
