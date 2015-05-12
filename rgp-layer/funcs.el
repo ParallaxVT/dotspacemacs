@@ -60,3 +60,10 @@
   "Duplicate current line below"
   (interactive)
   (duplicate-line-above t))
+
+;; Helm-Ag
+;; ===================================================================
+
+(defun start-helm-ag()
+  (interactive)
+  (setq current-prefix-arg '(4))(helm-ag))
