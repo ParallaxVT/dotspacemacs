@@ -219,6 +219,7 @@ layers configuration."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
+ '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
  '(paradox-github-token t)
  '(ring-bell-function (quote ignore) t))
 (custom-set-faces
