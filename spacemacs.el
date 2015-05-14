@@ -164,6 +164,7 @@ layers configuration."
   (evil-leader/set-key "oa" 'duplicate-line-above)
   (evil-leader/set-key "ob" 'duplicate-line-below)
   (evil-leader/set-key "oc" 'cleanup-buffer)
+  (evil-leader/set-key "og" 'open-agenda-file)
   (evil-leader/set-key "ol" 'align-regexp)
   (evil-leader/set-key "or" 'rotate-text)
   (evil-leader/set-key "os" 'sort-lines)
