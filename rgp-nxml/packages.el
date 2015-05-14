@@ -11,6 +11,6 @@
       (setq nxml-child-indent 4)
       (setq indent-tabs-mode nil)
       (setq nxml-slash-auto-complete-flag t)          ;; Auto close tag after typing /
-      (electric-pair-mode t)                          ;; Close autematically parenthesis and double quotes
-      (electric-indent-mode t)                        ;; Indent a line after pressing return
+      (setq electric-pair-mode t)                     ;; Close autematically parenthesis and double quotes
+      (setq electric-indent-mode t)                   ;; Indent a line after pressing return
       )))
