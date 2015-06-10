@@ -22,7 +22,9 @@
      ;; markdown
      ;; syntax-checking
      auto-completion
+     emacs-lisp ;; Required
      org
+     shell ;; Required
      rgp-bookmark+
      rgp-dired+
      rgp-elmacro
