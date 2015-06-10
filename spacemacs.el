@@ -23,6 +23,7 @@
      ;; syntax-checking
      auto-completion
      emacs-lisp ;; Required
+     git
      org
      shell ;; Required
      rgp-bookmark+
@@ -33,6 +34,7 @@
      rgp-helm
      rgp-ido
      rgp-layer
+     rgp-magit
      rgp-nxml
      rgp-org
      rgp-popwin
@@ -172,6 +174,7 @@ layers configuration."
   (evil-leader/set-key "os" 'sort-lines)
   (evil-leader/set-key "ow" 'save-buffer)
   (evil-leader/set-key "sa" 'start-helm-ag)
+  (setq magit-last-seen-setup-instructions "1.4.0")
   (setq initial-scratch-message
         (concat ";; Initialization successful, welcome to "
                 (substring (emacs-version) 0 16) "."))         ;; New scratch buffer text
