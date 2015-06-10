@@ -10,17 +10,17 @@
 ;;
 ;;; License: GPLv3
 
-(defvar layer-template-pre-extensions
-  '(
-    ;; pre extension layer-templates go here
-    )
-  "List of all extensions to load before the packages.")
+(setq layer-template-pre-extensions
+      '(
+        ;; pre extension layer-templates go here
+        )
+      )
 
-(defvar layer-template-post-extensions
-  '(
-    ;; post extension layer-templates go here
-    )
-  "List of all extensions to load after the packages.")
+(setq layer-template-post-extensions
+      '(
+        ;; post extension layer-templates go here
+        )
+      )
 
 ;; For each extension, define a function layer-template/init-<extension-layer-template>
 ;;

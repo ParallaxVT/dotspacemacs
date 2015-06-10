@@ -1,9 +1,8 @@
 ;;; packages.el --- rgp-swiper Layer packages File for Spacemacs
 
-(defvar rgp-swiper-packages
+(setq rgp-swiper-packages
   '(swiper)
-  "List of all packages to install and/or initialize. Built-in packages
-which require an initialization must be listed explicitly in the list.")
+  )
 
 (defun rgp-swiper/init-swiper ()
   "Initialize rgp-swiper"

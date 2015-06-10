@@ -10,15 +10,14 @@
 ;;
 ;;; License: GPLv3
 
-(defvar layer-template-packages
-  '(
-    ;; package layer-templates go here
-    )
-  "List of all packages to install and/or initialize. Built-in packages
-which require an initialization must be listed explicitly in the list.")
+(setq layer-template-packages
+      '(
+        ;; package layer-templates go here
+        )
+      )
 
-(defvar layer-template-excluded-packages '()
-  "List of packages to exclude.")
+(setq layer-template-excluded-packages '()
+      )
 
 ;; For each package, define a function layer-template/init-<package-layer-template>
 ;;

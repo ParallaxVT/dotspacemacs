@@ -1,9 +1,8 @@
 ;;; packages.el --- rgp-dired+ Layer packages File for Spacemacs
 
-(defvar rgp-dired+-packages
-  '(dired+)
-  "List of all packages to install and/or initialize. Built-in packages
-which require an initialization must be listed explicitly in the list.")
+(setq rgp-dired+-packages
+      '(dired+)
+      )
 
 (defun rgp-dired+/init-dired+ ()
   "Initialize rgp-dired+"
