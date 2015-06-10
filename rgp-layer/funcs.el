@@ -67,3 +67,12 @@
 (defun start-helm-ag()
   (interactive)
   (setq current-prefix-arg '(4))(helm-ag))
+
+;; Switch to previous buffer
+;; ==================================================================
+
+(defun smart-switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+Repeated invocations toggle between the two most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
