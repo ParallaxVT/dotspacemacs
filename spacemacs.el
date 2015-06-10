@@ -175,8 +175,6 @@ layers configuration."
   (evil-leader/set-key "os" 'sort-lines)
   (evil-leader/set-key "ow" 'save-buffer)
   (evil-leader/set-key "sa" 'start-helm-ag)
-  (bind-key "C-w" 'helm-find-files-up-one-level helm-map)
-  (bind-key "C-v" 'helm-execute-persistent-action helm-map)
   (setq magit-last-seen-setup-instructions "1.4.0")
   (setq initial-scratch-message
         (concat ";; Initialization successful, welcome to "
