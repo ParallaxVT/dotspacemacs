@@ -17,4 +17,4 @@
       (setq eshell-scroll-show-maximum-output t)
       (setq eshell-scroll-to-bottom-on-output t)
       (setq eshell-glob-include-dot-dot nil)
-      (setq eshell-directory-name (concat dotfiles-dir "eshell")))))
+      )))
