@@ -39,10 +39,8 @@ before layers configuration."
    dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
    dotspacemacs-always-show-changelog t
-   dotspacemacs-startup-lists '(recents projects)
-   dotspacemacs-themes '(monokai
-                         wombat
-                         )
+   dotspacemacs-startup-lists '(nil)
+   dotspacemacs-themes '(monokai wombat)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Source Code Pro"
                                :size 14
@@ -51,20 +49,22 @@ before layers configuration."
                                :powerline-scale 1.4)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
-   dotspacemacs-major-mode-leader-key ","
+   dotspacemacs-major-mode-leader-key "nil"
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-command-key ":"
+   dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-use-ido nil 
    dotspacemacs-enable-paste-micro-state t
    dotspacemacs-guide-key-delay 0.4
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
    dotspacemacs-fullscreen-at-startup nil
-   dotspacemacs-fullscreen-use-non-native nil
+   dotspacemacs-fullscreen-use-non-native t
    dotspacemacs-maximized-at-startup t
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
-   dotspacemacs-mode-line-unicode-symbols t
+   dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling t
-   dotspacemacs-smartparens-strict-mode nil
+   dotspacemacs-smartparens-strict-mode t
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
