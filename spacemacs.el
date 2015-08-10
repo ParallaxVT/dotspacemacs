@@ -1,3 +1,4 @@
+;ce; -*- mode: dotspacemacs -*-
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration."
   (setq-default
@@ -34,7 +35,14 @@
                       auto-completion-enable-help-tooltip t
                       auto-completion-complete-with-key-sequence "ht")
      )
-   dotspacemacs-excluded-packages '()
+
+   dotspacemacs-excluded-packages '(ace-jump-mode
+                                    ace-window
+                                    google-translate
+                                    helm-swopp
+                                    highlight-numbers
+                                    lunum-relative
+                                    )
    dotspacemacs-delete-orphan-packages t))
 
 (defun dotspacemacs/init ()
