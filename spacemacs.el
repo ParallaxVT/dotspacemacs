@@ -5,11 +5,15 @@
    dotspacemacs-configuration-layer-path '()
 
    dotspacemacs-configuration-layers
+   '(colors
      emacs-lisp ;; Required
+     evil-commentary
      git
      org
      shell ;; Required
+     version-control
      rgp-bookmark+
+     rgp-counsel
      rgp-dired+
      rgp-elmacro
      rgp-eshell
@@ -20,12 +24,15 @@
      rgp-magit
      rgp-nxml
      rgp-org
-     rgp-popwin
      rgp-php
+     rgp-popwin
      rgp-rotate-text
      rgp-swiper
      rgp-webmode
      rgp-yasnippet
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-complete-with-key-sequence "ht")
      )
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
