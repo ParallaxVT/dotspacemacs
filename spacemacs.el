@@ -79,6 +79,7 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (global-company-mode)
   (add-hook 'prog-mode-hook (lambda () (linum-mode 1)))
   (setq linum-format "%4d")
   (setq powerline-default-separator 'arrow)
