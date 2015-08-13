@@ -36,10 +36,20 @@
                       auto-completion-complete-with-key-sequence "ht")
      )
 
+   dotspacemacs-additional-packages '(smex)
+
    dotspacemacs-excluded-packages '(ace-jump-mode
                                     ace-window
                                     google-translate
-                                    helm-swopp
+                                    helm
+                                    helm-ag
+                                    helm-core
+                                    helm-descbinds
+                                    helm-make
+                                    helm-mode-manager
+                                    helm-projectile
+                                    helm-swoop
+                                    helm-themes
                                     highlight-numbers
                                     lunum-relative
                                     )
