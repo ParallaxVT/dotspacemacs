@@ -37,6 +37,5 @@
       (setq org-agenda-files (list
                               (expand-file-name "agenda.org" org-dir)
                               (expand-file-name "gforces.org" org-dir)))
-      (evil-leader/set-key "oa" 'open-agenda-file)
       )
     ))
