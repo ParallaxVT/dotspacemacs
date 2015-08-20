@@ -122,7 +122,6 @@ layers configuration."
   (evil-leader/set-key "or" 'rotate-text)
   (evil-leader/set-key "os" 'sort-lines)
   (evil-leader/set-key "ow" 'save-buffer)
-  (setq magit-last-seen-setup-instructions "1.4.0")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
