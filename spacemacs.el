@@ -51,7 +51,7 @@ This function is called at the very startup of Spacemacs initialization
 before layers configuration."
   (setq-default
    dotspacemacs-editing-style 'vim
-   dotspacemacs-verbose-loading nil
+   dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner 'official
    dotspacemacs-always-show-changelog t
    dotspacemacs-startup-lists '(nil)
