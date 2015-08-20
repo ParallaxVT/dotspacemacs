@@ -120,33 +120,6 @@ layers configuration."
   (menu-bar-mode 1)                                            ;; Show menu bar
   (add-to-list 'exec-path "C:/msys64/usr/bin/")                ;; Add git.exe to the exec-path
   (remove-hook 'org-mode-hook 'org-bullets-mode)               ;; Disable image bullet points. Doesn't work added to rgp-org layer
-  (custom-set-faces
-   '(org-agenda-calendar-event ((t (:foreground "Orange"))))
-   '(org-agenda-date           ((t (:foreground "SteelBLue1"))))
-   '(org-agenda-date-today     ((t (:foreground "SteelBLue1" :background nil :bold t :inverse-video nil))))
-   '(org-agenda-date-weekend   ((t (:foreground "SteelBLue1" :bold t :underline nil))))
-   '(org-agenda-done           ((t (:foreground "Gray30"))))
-   '(org-block                 ((t (:foreground "LawnGreen"))))
-   '(org-block-begin-line      ((t (:foreground "ForestGreen"))))
-   '(org-block-end-line        ((t (:foreground "ForestGreen"))))
-   '(org-date                  ((t (:foreground "Plum3" :underline t))))
-   '(org-done                  ((t (:foreground "Gray40" :bold t))))
-   '(org-hide                  ((t (:foreground "Gray7"))))
-   '(org-level-1               ((t (:foreground "Deep Pink" :height 1.0))))
-   '(org-level-2               ((t (:foreground "OliveDrab3" :height 1.0))))
-   '(org-level-3               ((t (:foreground "Sky Blue" :height 1.0))))
-   '(org-level-4               ((t (:foreground "Indian Red" :height 1.0))))
-   '(org-level-5               ((t (:foreground "Light Goldenrod" :height 1.0))))
-   '(org-level-6               ((t (:foreground "Orange" :height 1.0))))
-   '(org-level-7               ((t (:foreground "Firebrick2" :height 1.0))))
-   '(org-level-8               ((t (:foreground "Mint Cream" :height 1.0))))
-   '(org-scheduled             ((t (:foreground "OliveDrab3"))))
-   '(org-scheduled-previously  ((t (:foreground "Orange"))))
-   '(org-scheduled-today       ((t (:foreground "Orange"))))
-   '(org-special-keyword       ((t (:foreground "Plum3"))))
-   '(org-tag                   ((t (:foreground "SteelBLue1"))))
-   '(org-todo                  ((t (:foreground "Firebrick2" :bold t))))
-   )
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
