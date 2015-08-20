@@ -6,6 +6,8 @@
     :defer t
     :preface
     (progn
+      ;; Without the following line, helm would take 2 minutes to load
+      (setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
       (setq helm-boring-file-regexp-list
             '("\\.jpg$" "\\.jpeg$" "\\.gif$" "\\.png$" "\\.swf$" "\\.sa$" "\\.fla$" "\\.elc"))
       (setq helm-ff-skip-boring-files t)
