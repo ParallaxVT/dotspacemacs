@@ -118,7 +118,6 @@ layers configuration."
   (global-prettify-symbols-mode 1)                             ;; Display a lambda symbol itstead of the word
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;; Show file path in the title bar if available. Buffer name otherwise
   (menu-bar-mode 1)                                            ;; Show menu bar
-  (remove-hook 'org-mode-hook 'org-bullets-mode)               ;; Disable image bullet points. Doesn't work added to rgp-org layer
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
