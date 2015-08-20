@@ -68,7 +68,7 @@ before layers configuration."
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-command-key ":"
    dotspacemacs-auto-save-file-location 'cache
-   dotspacemacs-use-ido nil 
+   dotspacemacs-use-ido nil
    dotspacemacs-enable-paste-micro-state t
    dotspacemacs-guide-key-delay 0.4
    dotspacemacs-loading-progress-bar nil
