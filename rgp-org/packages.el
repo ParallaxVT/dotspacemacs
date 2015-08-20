@@ -25,10 +25,10 @@
     :preface
     (progn
       (setq org-agenda-start-with-log-mode t)
-      (setq org-agenda-tags-column -150)
+      (setq org-agenda-tags-column -140)
       (setq org-agenda-window-setup 'current-window)
       (setq org-export-html-postamble nil)
-      (setq org-tags-column -148)
+      (setq org-tags-column 0)
       (setq org-hide-leading-stars t)
       (setq org-indent-mode t)
       (setq org-startup-indented t)
