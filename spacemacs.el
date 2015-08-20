@@ -1,4 +1,4 @@
-;ce; -*- mode: dotspacemacs -*-
+;; -*- mode: dotspacemacs -*-
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration."
   (setq-default
