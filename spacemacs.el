@@ -106,6 +106,9 @@ layers configuration."
                 (substring (emacs-version) 0 16) "."))         ;; New scratch buffer text
   (global-prettify-symbols-mode 1)                             ;; Display a lambda symbol itstead of the word
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;; Show file path in the title bar if available. Buffer name otherwise
+  ;; ====================================================================
+  ;; Keybindings
+  ;; ====================================================================
   (global-set-key (kbd "M-SPC") 'evil-normal-state)
   (global-set-key (kbd "M-<RET>") 'yas-expand)
   (evil-leader/set-key "w <RET>" 'delete-other-windows)
