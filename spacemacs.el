@@ -95,9 +95,17 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
   (global-company-mode)
+  ;; ====================================================================
+  ;; Appearance
+  ;; ====================================================================
   (add-hook 'prog-mode-hook (lambda () (linum-mode 1)))
   (setq linum-format "%4d")
   (setq powerline-default-separator 'arrow)
+  (setq initial-scratch-message
+        (concat ";; Initialization successful, welcome to "
+                (substring (emacs-version) 0 16) "."))         ;; New scratch buffer text
+  (global-prettify-symbols-mode 1)                             ;; Display a lambda symbol itstead of the word
+  (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;; Show file path in the title bar if available. Buffer name otherwise
   (global-set-key (kbd "M-SPC") 'evil-normal-state)
   (global-set-key (kbd "M-<RET>") 'yas-expand)
   (evil-leader/set-key "w <RET>" 'delete-other-windows)
@@ -112,11 +120,6 @@ layers configuration."
   (evil-leader/set-key "os" 'sort-lines)
   (evil-leader/set-key "ow" 'save-buffer)
   (setq magit-last-seen-setup-instructions "1.4.0")
-  (setq initial-scratch-message
-        (concat ";; Initialization successful, welcome to "
-                (substring (emacs-version) 0 16) "."))         ;; New scratch buffer text
-  (global-prettify-symbols-mode 1)                             ;; Display a lambda symbol itstead of the word
-  (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;; Show file path in the title bar if available. Buffer name otherwise
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
