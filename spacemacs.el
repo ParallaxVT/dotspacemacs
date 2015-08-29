@@ -11,6 +11,7 @@
      evil-commentary
      git
      org
+     python
      shell ;; Required
      version-control
      rgp-bookmark+
