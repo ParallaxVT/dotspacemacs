@@ -10,6 +10,7 @@
      emacs-lisp ;; Required
      evil-commentary
      git
+     github
      org
      python
      shell ;; Required
