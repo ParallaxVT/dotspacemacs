@@ -15,6 +15,7 @@
      python
      shell ;; Required
      version-control
+     rgp-avy
      rgp-bookmark+
      rgp-counsel
      rgp-dired+
