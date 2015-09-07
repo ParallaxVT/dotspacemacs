@@ -9,7 +9,7 @@
                 "org directory in Windows and my life laptop"))
 (when debian-p (defvar org-dir "~/org/"
                  "org directory in Windows and my life laptop"))
-(when virtualbox-p (defvar org-dir "/media/c/Users/Rafael/AppData/Roaming/org/"
+(when virtualbox-p (defvar org-dir "/media/e/dropbox/org/"
                      "org directory in my Virtual Box Debian"))
 
 (defun open-agenda-file ()
