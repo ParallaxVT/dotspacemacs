@@ -67,7 +67,7 @@ before layers configuration."
                                :powerline-scale 1.4)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
-   dotspacemacs-major-mode-leader-key "nil"
+   dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-command-key ":"
    dotspacemacs-auto-save-file-location 'cache
