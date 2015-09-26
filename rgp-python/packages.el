@@ -23,7 +23,7 @@
 (defun rgp-python/init-python ()
   (use-package python
     :defer t
-    :config
+    :init
     (progn
-      (setq python-shell-interpreter "python")
+      (setq python-shell-interpreter "ipython3")
       )))
