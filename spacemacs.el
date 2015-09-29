@@ -15,7 +15,6 @@
      python
      shell ;; Required
      version-control
-     rgp-avy
      rgp-bookmark+
      rgp-dired+
      rgp-elmacro
