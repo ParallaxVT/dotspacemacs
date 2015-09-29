@@ -17,7 +17,6 @@
      version-control
      rgp-avy
      rgp-bookmark+
-     rgp-counsel
      rgp-dired+
      rgp-elmacro
      rgp-eshell
