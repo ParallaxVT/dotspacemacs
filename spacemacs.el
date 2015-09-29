@@ -57,7 +57,7 @@ before layers configuration."
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner 'official
    dotspacemacs-always-show-changelog t
-   dotspacemacs-startup-lists '(nil)
+   dotspacemacs-startup-lists '(recents)
    dotspacemacs-themes '(monokai wombat)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Hack"
