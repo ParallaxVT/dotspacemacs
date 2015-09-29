@@ -3,6 +3,7 @@
   "Configuration Layers declaration."
   (setq-default
 
+   dotspacemacs-distribution 'spacemacs
    dotspacemacs-configuration-layer-path '()
 
    dotspacemacs-configuration-layers
@@ -68,10 +69,15 @@ before layers configuration."
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-command-key ":"
+   dotspacemacs-remap-Y-to-y$ t
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-use-ido nil
+   dotspacemacs-helm-resize t
+   dotspacemacs-helm-no-header t
+   dotspacemacs-helm-position 'bottom
    dotspacemacs-enable-paste-micro-state t
    dotspacemacs-guide-key-delay 0.4
+   dotspacemacs-which-key-position 'bottom
    dotspacemacs-loading-progress-bar nil
    dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native t
@@ -81,6 +87,7 @@ before layers configuration."
    dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling t
    dotspacemacs-smartparens-strict-mode t
+   dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
@@ -89,6 +96,9 @@ before layers configuration."
   (setq-default
    evil-escape-key-sequence "fd"
    )
+  )
+
+(defun dotspacemacs/user-init ()
   )
 
 (defun dotspacemacs/user-config ()
