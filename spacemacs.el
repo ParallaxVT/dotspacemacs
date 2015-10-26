@@ -122,6 +122,7 @@ layers configuration."
   ;; ====================================================================
   (global-set-key (kbd "M-SPC") 'evil-normal-state)
   (global-set-key (kbd "M-<RET>") 'yas-expand)
+  (global-set-key (kbd "C-c c") 'Insert-GforcesCar)
   (evil-leader/set-key "w <RET>" 'delete-other-windows)
   (evil-leader/set-key "oa" 'duplicate-line-above)
   (evil-leader/set-key "ob" 'duplicate-line-below)
