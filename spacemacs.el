@@ -25,6 +25,7 @@
      rgp-ido
      rgp-layer
      rgp-magit
+     rgp-multi-term
      rgp-nxml
      rgp-org
      rgp-php
