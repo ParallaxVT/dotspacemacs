@@ -155,7 +155,7 @@ layers configuration."
    (quote
     (magit fringe-helper auto-complete avy names company anzu iedit smartparens highlight flx popup pos-tip guide-key s popwin yasnippet request projectile helm async parent-mode alert log4e gntp spinner pkg-info epl evil-leader evil bind-key dash gh gitignore-mode github-browse-file logito pcache magit-popup git-commit with-editor toc-org pcre2el window-numbering web-mode volatile-highlights vi-tilde-fringe use-package swiper smooth-scrolling smeargle shell-pop rfringe rainbow-delimiters powerline php-mode paradox page-break-lines org-repo-todo org-present org-pomodoro org-bullets open-junk-file neotree multi-term move-text monokai-theme magit-gh-pulls macrostep linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-anything highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-descbinds helm-c-yasnippet helm-ag guide-key-tip google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe gist gh-md flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elmacro elisp-slime-nav dired+ company-statistics company-quickhelp clean-aindent-mode buffer-move bookmark+ auto-yasnippet auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-mode ac-ispell)))
  '(paradox-github-token t)
- '(ring-bell-function (quote ignore)))
+ '(ring-bell-function (quote ignore) t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -168,7 +168,7 @@ layers configuration."
  '(org-agenda-date ((t (:foreground "SteelBLue1"))) t)
  '(org-agenda-date-today ((t (:foreground "SteelBLue1" :background nil :bold t :inverse-video nil))) t)
  '(org-agenda-date-weekend ((t (:foreground "SteelBLue1" :bold t :underline nil))) t)
- '(org-agenda-done ((t (:foreground "Gray30"))))
+ '(org-agenda-done ((t (:foreground "Gray30"))) t)
  '(org-block ((t (:foreground "LawnGreen"))))
  '(org-block-begin-line ((t (:foreground "ForestGreen"))) t)
  '(org-block-end-line ((t (:foreground "ForestGreen"))) t)
@@ -188,6 +188,6 @@ layers configuration."
  '(org-scheduled-today ((t (:foreground "Orange"))))
  '(org-special-keyword ((t (:foreground "Plum3"))))
  '(org-tag ((t (:foreground "SteelBLue1"))))
- '(org-todo ((t (:foreground "Firebrick2" :bold t))))
+ '(org-todo ((t (:foreground "Firebrick2" :bold t))) t)
  '(swiper-line-face ((t (:background "forestgreen"))))
  '(swiper-match-face-3 ((t (:foreground "white" :background "darkorange")))))
