@@ -28,6 +28,7 @@
      rgp-multi-term
      rgp-nxml
      rgp-org
+     rgp-python
      rgp-php
      rgp-popwin
      rgp-rotate-text
