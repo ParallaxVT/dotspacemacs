@@ -1,7 +1,15 @@
-;;; packages.el --- rgp-popwin Layer packages File for Spacemacs
+;;; packages.el --- rgp-popwin layer packages file for Spacemacs
+
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Rafael <rafael@debian64>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
 
 (defun rgp-popwin/init-popwin ()
-  "Initialize rgp-popwin"
   (use-package popwin
     :init
     (progn

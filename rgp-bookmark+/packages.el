@@ -1,13 +1,18 @@
-;;; packages.el --- rgp-bookmark+ Layer packages File for Spacemacs
+;;; packages.el --- rgp-bookmark+ layer packages file for Spacemacs
 
-(defvar rgp-bookmark+-packages
-  '(bookmark+)
-  "List of all packages to install and/or initialize. Built-in packages
-which require an initialization must be listed explicitly in the list.")
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Rafael <rafael@debian64>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+(defconst rgp-bookmark+-packages
+  '(bookmark+))
 
 (defun rgp-bookmark+/init-bookmark+ ()
-  "Initialize rgp-bookmark+"
   (use-package bookmark+
     :defer t
-    :commands (bookmark-bmenu-list)
-  ))
+    :commands (bookmark-bmenu-list)))

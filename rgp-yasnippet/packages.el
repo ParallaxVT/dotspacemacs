@@ -1,7 +1,15 @@
-;;; packages.el --- rgp-yasnippet Layer packages File for Spacemacs
+;;; packages.el --- rgp-yasnippet layer packages file for Spacemacs
+
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Rafael <rafael@debian64>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
 
 (defun rgp-yasnippet/init-yasnippet ()
-  "Initialize rgp-yasnippet"
   (use-package yasnippet
     :config
     (progn
@@ -21,5 +29,4 @@
                   `(lambda ()
                      (setq yas-fallback-behavior
                            '(apply ,original-command))
-                     (local-set-key [tab] 'yas-expand)))))
-    ))
+                     (local-set-key [tab] 'yas-expand)))))))

@@ -1,11 +1,18 @@
-;;; packages.el --- rgp-swiper Layer packages File for Spacemacs
+;;; packages.el --- rgp-swipper layer packages file for Spacemacs
 
-(setq rgp-swiper-packages
-  '(swiper)
-  )
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Rafael <rafael@debian64>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+(defconst rgp-swiper-packages
+  '(swiper))
 
 (defun rgp-swiper/init-swiper ()
-  "Initialize rgp-swiper"
   (use-package swiper
     :defer t
     :commands swiper
@@ -16,6 +23,4 @@
       (setq swiper-completion-method 'ivy)
       (custom-set-faces
        '(swiper-line-face ((t (:background "forestgreen"))))
-       '(swiper-match-face-3 ((t (:foreground "white" :background "darkorange"))))
-       )))
-  )
+       '(swiper-match-face-3 ((t (:foreground "white" :background "darkorange"))))))))

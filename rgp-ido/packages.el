@@ -1,7 +1,15 @@
-;;; packages.el --- rgp-ido Layer packages File for Spacemacs
+;;; packages.el --- rgp-ido layer packages file for Spacemacs
+
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Rafael <rafael@debian64>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
 
 (defun rgp-ido/init-ido ()
-  "Initialize rgp-ido"
   (use-package ido
     :defer t
     :preface
@@ -10,5 +18,4 @@
       (setq ido-ignore-files '("\\.jpg$" "\\.jpeg$" "\\.gif$" "\\.png$" "\\.swf$" "\\.sa$" "\\.fla$" "\\.elc" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./"))
       (setq ido-max-prospects 50)
       (define-key ido-file-completion-map "\C-v" 'ido-exit-minibuffer)
-      (define-key ido-file-completion-map "\C-w" 'ido-up-directory)
-      )))
+      (define-key ido-file-completion-map "\C-w" 'ido-up-directory))))

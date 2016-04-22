@@ -1,4 +1,13 @@
-;;; packages.el --- rgp-org Layer packages File for Spacemacs
+;;; packages.el --- rgp-org layer packages file for Spacemacs
+
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Rafael <rafael@debian64>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
 
 (defconst win32-p (eq system-type 'windows-nt) "Windows OS.")
 (defconst virtualbox-p (string-equal system-name "debian") "Virtualbox Machine")
@@ -61,8 +70,4 @@
        '(org-scheduled-previously  ((t (:foreground "Orange"))))
        '(org-scheduled-today       ((t (:foreground "Orange"))))
        '(org-special-keyword       ((t (:foreground "Plum3"))))
-       '(org-tag                   ((t (:foreground "Gray50" :bold nil))))
-       '(org-todo                  ((t (:foreground "Firebrick2" :bold t))))
-       )
-      )
-    ))
+       '(org-tag                   ((t (:foreground "Gray50" :bold nil)))) '(org-todo                  ((t (:foreground "Firebrick2" :bold t))))))))

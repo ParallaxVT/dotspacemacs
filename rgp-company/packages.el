@@ -1,29 +1,18 @@
-;;; packages.el --- rgp-company Layer packages File for Spacemacs
+;;; packages.el --- rgp-company layer packages file for Spacemacs
+
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
 ;;
-;; Copyright (c) 2012-2014 Sylvain Benner
-;; Copyright (c) 2014-2015 Sylvain Benner & Contributors
-;;
-;; Author: Sylvain Benner <sylvain.benner@gmail.com>
+;; Author: Rafael <rafael@debian64>
 ;; URL: https://github.com/syl20bnr/spacemacs
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
 ;;; License: GPLv3
 
-;; List of all packages to install and/or initialize. Built-in packages
-;; which require an initialization must be listed explicitly in the list.
-(setq rgp-company-packages '())
+(defconst rgp-company-packages
+  '())
 
-;; List of packages to exclude.
-(setq rgp-company-excluded-packages '())
-
-;; For each package, define a function rgp-company/init-<package-name>
-;;
 (defun rgp-company/init-company
-    "Initialize my package"
-  (global-company-mode)
-  )
-;;
-;; Often the body of an initialize function uses `use-package'
-;; For more info on `use-package', see readme:
-;; https://github.com/jwiegley/use-package
+    (use-package company
+      :defer t
+      :commands (global-company-mode)))

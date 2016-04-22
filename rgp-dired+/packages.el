@@ -1,11 +1,18 @@
-;;; packages.el --- rgp-dired+ Layer packages File for Spacemacs
+;;; packages.el --- rgp-dired+ layer packages file for Spacemacs
 
-(setq rgp-dired+-packages
-      '(dired+)
-      )
+;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
+;;
+;; Author: Rafael <rafael@debian64>
+;; URL: https://github.com/syl20bnr/spacemacs
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+(defconst rgp-dired+-packages
+  '(dired+))
 
 (defun rgp-dired+/init-dired+ ()
-  "Initialize rgp-dired+"
   (use-package dired+
     :config
     (progn
