@@ -135,6 +135,7 @@ layers configuration."
   (evil-leader/set-key "oo" 'smart-switch-to-previous-buffer)
   (evil-leader/set-key "or" 'rotate-text)
   (evil-leader/set-key "os" 'sort-lines)
+  (evil-leader/set-key "oS" 'sort-krpano)
   (evil-leader/set-key "ow" 'save-buffer)
   )
 
