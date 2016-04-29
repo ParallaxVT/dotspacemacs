@@ -36,6 +36,8 @@
      rgp-webmode
      rgp-yasnippet
      (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-enable-sort-by-usage t
                       auto-completion-enable-help-tooltip t
                       auto-completion-complete-with-key-sequence "ht")
      )
@@ -119,11 +121,12 @@ layers configuration."
   (global-prettify-symbols-mode 1)                             ;; Display a lambda symbol itstead of the word
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;; Show file path in the title bar if available. Buffer name otherwise
   (setq vc-follow-symlinks t)                                  ;; Follow symlinks without asking
+  (global-company-mode)
   ;; ====================================================================
   ;; Keybindings
   ;; ====================================================================
   (global-set-key (kbd "M-SPC") 'evil-normal-state)
-  (global-set-key (kbd "M-<RET>") 'yas-expand)
+  (global-set-key (kbd "M-<RET>") 'company-yasnippet)
   (global-set-key (kbd "C-c c") 'Insert-GforcesCar)
   (evil-leader/set-key "w <RET>" 'delete-other-windows)
   (evil-leader/set-key "oa" 'duplicate-line-above)
