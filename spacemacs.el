@@ -143,6 +143,14 @@ layers configuration."
   (evil-leader/set-key "oS" 'sort-krpano)
   (evil-leader/set-key "ow" 'save-buffer)
   )
+;; ====================================================================
+;; Faces
+;; ====================================================================
+(custom-set-faces
+ '(nxml-element-local-name ((t (:foreground "#FD971F")))) ;; Orange
+ '(nxml-attribute-local-name ((t (:foreground "#A6E22E")))) ;; Green
+ '(nxml-attribute-value ((t (:foreground "#A1EFE4")))) ;; Blue
+ )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
