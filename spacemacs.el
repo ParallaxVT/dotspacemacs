@@ -123,6 +123,7 @@ layers configuration."
   (setq vc-follow-symlinks t)                                  ;; Follow symlinks without asking
   (global-company-mode)
   (spacemacs/toggle-automatic-symbol-highlight-on)
+  (setq git-gutter-fr+-side 'left-fringe)
   ;; ====================================================================
   ;; Keybindings
   ;; ====================================================================
