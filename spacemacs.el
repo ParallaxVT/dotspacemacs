@@ -122,6 +122,7 @@ layers configuration."
   (setq frame-title-format '(buffer-file-name "%f" ("%b")))    ;; Show file path in the title bar if available. Buffer name otherwise
   (setq vc-follow-symlinks t)                                  ;; Follow symlinks without asking
   (global-company-mode)
+  (spacemacs/toggle-automatic-symbol-highlight-on)
   ;; ====================================================================
   ;; Keybindings
   ;; ====================================================================
