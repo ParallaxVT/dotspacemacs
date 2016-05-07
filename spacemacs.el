@@ -32,7 +32,6 @@
      rgp-php
      rgp-popwin
      rgp-rotate-text
-     rgp-swiper
      rgp-webmode
      rgp-yasnippet
      (auto-completion :variables
