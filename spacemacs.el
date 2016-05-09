@@ -12,6 +12,7 @@
      evil-commentary
      git
      github
+     markdown
      org
      python
      shell ;; Required
