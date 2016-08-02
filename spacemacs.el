@@ -61,7 +61,8 @@ before layers configuration."
    dotspacemacs-startup-banner 'official
    dotspacemacs-always-show-changelog t
    dotspacemacs-startup-lists '(recents)
-   dotspacemacs-themes '(monokai wombat)
+   dotspacemacs-themes '(monokai
+                         )
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Hack"
                                :size 13
