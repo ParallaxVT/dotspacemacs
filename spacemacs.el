@@ -115,7 +115,6 @@ layers configuration."
   ;; ====================================================================
   ;; Appearance
   ;; ====================================================================
-  (add-hook 'prog-mode-hook (lambda () (linum-mode 1)))
   (setq linum-format "%4d")
   (setq powerline-default-separator 'arrow)
   (setq initial-scratch-message
