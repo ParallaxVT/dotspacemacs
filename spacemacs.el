@@ -27,7 +27,7 @@
      rgp-layer
      rgp-magit
      rgp-multi-term
-     rgp-nxml
+     rgp-xml
      rgp-org
      rgp-python
      rgp-php
