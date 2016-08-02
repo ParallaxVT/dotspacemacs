@@ -96,6 +96,8 @@ before layers configuration."
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
+   dotspacemacs-line-numbers nil
+   dotspacemacs-elpa-https nil
    )
   ;; User initialization goes here
   (setq-default
