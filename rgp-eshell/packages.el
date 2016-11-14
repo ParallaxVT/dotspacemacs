@@ -9,11 +9,13 @@
 ;;
 ;;; License: GPLv3
 
-(defun rgp-eshell/init-eshell ()
+(defconst rgp-eshell-packages '(eshell))
+
+(defun rgp-eshell/post-init-eshell ()
   (use-package eshell
     :commands eshell
     :defer t
-    :preface
+    :config
     (progn
       (setq eshell-ask-to-save-history 'always)
       (setq eshell-history-size 1000)

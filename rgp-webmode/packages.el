@@ -9,8 +9,7 @@
 ;;
 ;;; License: GPLv3
 
-(defconst rgp-webmode-packages
-  '(web-mode))
+(defconst rgp-webmode-packages '(web-mode))
 
 (defun rgp-webmode/init-web-mode ()
   (use-package web-mode

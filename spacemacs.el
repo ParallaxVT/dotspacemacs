@@ -1,68 +1,68 @@
-;; -*- mode: dotspacemacs -*-
+;; -*- mode: emacs-lisp -*-
+
 (defun dotspacemacs/layers ()
-  "Configuration Layers declaration."
+  "Configuration Layers declaration.
+You should not put any user code in this function besides modifying the variable
+values."
   (setq-default
-
    dotspacemacs-distribution 'spacemacs
+   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
-
    dotspacemacs-configuration-layers
-   '(colors
+   '(
+     auto-completion
+     better-defaults
+     colors
      emacs-lisp ;; Required
      evil-commentary
      git
      github
+     ivy
      markdown
      org
-     python
+     ;;python
      shell ;; Required
+     spell-checking
      version-control
-     rgp-bookmark+
-     rgp-dired+
-     rgp-elmacro
+     ;; (shell :variables
+     ;;        shell-default-height 30
+     ;;        shell-default-position 'bottom)
      rgp-eshell
      rgp-flyspell
-     rgp-helm
-     rgp-ido
+     rgp-krpano
      rgp-layer
-     rgp-magit
      rgp-multi-term
-     rgp-xml
      rgp-org
      rgp-python
-     rgp-php
-     rgp-popwin
      rgp-rotate-text
      rgp-webmode
      rgp-yasnippet
-     (auto-completion :variables
-                      auto-completion-enable-snippets-in-popup t
-                      auto-completion-enable-sort-by-usage t
-                      auto-completion-enable-help-tooltip t
-                      auto-completion-complete-with-key-sequence "ht")
      )
-
-   dotspacemacs-excluded-packages '(ace-jump-mode
-                                    ace-window
-                                    google-translate
-                                    helm-swopp
-                                    highlight-numbers
-                                    lunum-relative
-                                    )
-   dotspacemacs-delete-orphan-packages t))
+   dotspacemacs-additional-packages '(
+                                      bookmark+
+                                      dired+
+                                      elmacro
+                                      vimish-fold
+                                      evil-vimish-fold)
+   dotspacemacs-frozen-packages '()
+   dotspacemacs-excluded-packages '()
+   dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
-  "Initialization function.
-This function is called at the very startup of Spacemacs initialization
-before layers configuration."
   (setq-default
+   dotspacemacs-elpa-https nil
+   dotspacemacs-elpa-timeout 5
+   dotspacemacs-check-for-update nil
+   dotspacemacs-elpa-subdirectory nil
    dotspacemacs-editing-style 'vim
    dotspacemacs-verbose-loading t
    dotspacemacs-startup-banner 'official
-   dotspacemacs-always-show-changelog t
-   dotspacemacs-startup-lists '(recents)
+   dotspacemacs-startup-lists '((recents . 10))
+   dotspacemacs-startup-buffer-responsive t
+   dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-themes '(monokai
-                         )
+                         spacemacs-dark)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Hack"
                                :size 13
@@ -70,18 +70,28 @@ before layers configuration."
                                :width normal
                                :powerline-scale 1.4)
    dotspacemacs-leader-key "SPC"
+   dotspacemacs-emacs-command-key "SPC"
+   dotspacemacs-ex-command-key ":"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
-   dotspacemacs-command-key ":"
+   dotspacemacs-distinguish-gui-tab nil
    dotspacemacs-remap-Y-to-y$ t
+   dotspacemacs-retain-visual-state-on-shift t
+   dotspacemacs-visual-line-move-text t
+   dotspacemacs-ex-substitute-global nil
+   dotspacemacs-default-layout-name "Default"
+   dotspacemacs-display-default-layout nil
+   dotspacemacs-auto-resume-layouts nil
+   dotspacemacs-large-file-size 1
    dotspacemacs-auto-save-file-location 'cache
-   dotspacemacs-use-ido nil
+   dotspacemacs-max-rollback-slots 5
    dotspacemacs-helm-resize t
    dotspacemacs-helm-no-header t
    dotspacemacs-helm-position 'bottom
-   dotspacemacs-enable-paste-micro-state t
-   dotspacemacs-guide-key-delay 0.4
+   dotspacemacs-helm-use-fuzzy 'always
+   dotspacemacs-enable-paste-transient-state nil
+   dotspacemacs-which-key-delay 0.4
    dotspacemacs-which-key-position 'bottom
    dotspacemacs-loading-progress-bar nil
    dotspacemacs-fullscreen-at-startup nil
@@ -89,32 +99,31 @@ before layers configuration."
    dotspacemacs-maximized-at-startup t
    dotspacemacs-active-transparency 90
    dotspacemacs-inactive-transparency 90
+   dotspacemacs-show-transient-state-title t
+   dotspacemacs-show-transient-state-color-guide t
    dotspacemacs-mode-line-unicode-symbols nil
    dotspacemacs-smooth-scrolling t
+   dotspacemacs-line-numbers nil
+   dotspacemacs-folding-method 'evil
    dotspacemacs-smartparens-strict-mode t
+   dotspacemacs-smart-closing-parenthesis t
    dotspacemacs-highlight-delimiters 'all
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
-   dotspacemacs-line-numbers nil
-   dotspacemacs-elpa-https nil
-   )
-  ;; User initialization goes here
-  (setq-default
-   evil-escape-key-sequence "fd"
-   )
-  )
+   dotspacemacs-whitespace-cleanup 'trailing
+  ))
 
 (defun dotspacemacs/user-init ()
+  "Initialization function for user code.
+It is called immediately after `dotspacemacs/init', before layer configuration
+executes.
+ This function is mostly useful for variables that need to be set
+before packages are loaded. If you are unsure, you should try in setting them in
+`dotspacemacs/user-config' first."
   )
 
 (defun dotspacemacs/user-config ()
-  "Configuration function.
- This function is called at the very end of Spacemacs initialization after
-layers configuration."
-  ;; ====================================================================
-  ;; Appearance
-  ;; ====================================================================
   (setq linum-format "%4d")
   (setq powerline-default-separator 'arrow)
   (setq initial-scratch-message
@@ -126,12 +135,16 @@ layers configuration."
   (global-company-mode)
   (spacemacs/toggle-automatic-symbol-highlight-on)
   (setq git-gutter-fr+-side 'left-fringe)
-  ;; ====================================================================
+  (add-to-list 'company-backends 'company-krpano)
+  ;; Fix spacemacs take ages to startup
+  (setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+ ;; ====================================================================
   ;; Keybindings
   ;; ====================================================================
   (global-set-key (kbd "M-SPC") 'evil-normal-state)
   (global-set-key (kbd "M-<RET>") 'company-yasnippet)
   (global-set-key (kbd "C-c c") 'Insert-GforcesCar)
+  (global-set-key (kbd "C-c c") 'company-complete)
   (evil-leader/set-key "w <RET>" 'delete-other-windows)
   (evil-leader/set-key "oa" 'duplicate-line-above)
   (evil-leader/set-key "ob" 'duplicate-line-below)
@@ -145,65 +158,6 @@ layers configuration."
   (evil-leader/set-key "oS" 'sort-krpano)
   (evil-leader/set-key "ow" 'save-buffer)
   )
-;; ====================================================================
-;; Faces
-;; ====================================================================
-(custom-set-faces
- '(nxml-element-local-name ((t (:foreground "#FD971F")))) ;; Orange
- '(nxml-attribute-local-name ((t (:foreground "#A6E22E")))) ;; Green
- '(nxml-attribute-value ((t (:foreground "#A1EFE4")))) ;; Blue
- )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ahs-case-fold-search nil)
- '(ahs-default-range (quote ahs-range-whole-buffer))
- '(ahs-idle-interval 0.25)
- '(ahs-idle-timer 0 t)
- '(ahs-inhibit-face-list nil)
- '(bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
- '(package-selected-packages
-   (quote
-    (magit fringe-helper auto-complete avy names company anzu iedit smartparens highlight flx popup pos-tip guide-key s popwin yasnippet request projectile helm async parent-mode alert log4e gntp spinner pkg-info epl evil-leader evil bind-key dash gh gitignore-mode github-browse-file logito pcache magit-popup git-commit with-editor toc-org pcre2el window-numbering web-mode volatile-highlights vi-tilde-fringe use-package swiper smooth-scrolling smeargle shell-pop rfringe rainbow-delimiters powerline php-mode paradox page-break-lines org-repo-todo org-present org-pomodoro org-bullets open-junk-file neotree multi-term move-text monokai-theme magit-gh-pulls macrostep linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-anything highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-descbinds helm-c-yasnippet helm-ag guide-key-tip google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe gist gh-md flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elmacro elisp-slime-nav dired+ company-statistics company-quickhelp clean-aindent-mode buffer-move bookmark+ auto-yasnippet auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link ace-jump-mode ac-ispell)))
- '(paradox-github-token t)
- '(ring-bell-function (quote ignore) t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((((class color) (min-colors 257)) (:foreground "#F8F8F2" :background "#272822")) (((class color) (min-colors 89)) (:foreground "#F5F5F5" :background "#1B1E1C"))))
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
- '(org-agenda-calendar-event ((t (:foreground "Orange"))))
- '(org-agenda-date ((t (:foreground "SteelBLue1"))) t)
- '(org-agenda-date-today ((t (:foreground "SteelBLue1" :background nil :bold t :inverse-video nil))) t)
- '(org-agenda-date-weekend ((t (:foreground "SteelBLue1" :bold t :underline nil))) t)
- '(org-agenda-done ((t (:foreground "Gray30"))) t)
- '(org-block ((t (:foreground "LawnGreen"))))
- '(org-block-begin-line ((t (:foreground "ForestGreen"))) t)
- '(org-block-end-line ((t (:foreground "ForestGreen"))) t)
- '(org-date ((t (:foreground "Plum3" :underline t))))
- '(org-done ((t (:foreground "Gray40" :bold t))))
- '(org-hide ((t (:foreground "Gray7"))))
- '(org-level-1 ((t (:foreground "Deep Pink" :height 1.0))))
- '(org-level-2 ((t (:foreground "OliveDrab3" :height 1.0))))
- '(org-level-3 ((t (:foreground "Sky Blue" :height 1.0))))
- '(org-level-4 ((t (:foreground "Indian Red" :height 1.0))))
- '(org-level-5 ((t (:foreground "Light Goldenrod" :height 1.0))))
- '(org-level-6 ((t (:foreground "Orange" :height 1.0))))
- '(org-level-7 ((t (:foreground "Firebrick2" :height 1.0))))
- '(org-level-8 ((t (:foreground "Mint Cream" :height 1.0))))
- '(org-scheduled ((t (:foreground "OliveDrab3"))))
- '(org-scheduled-previously ((t (:foreground "Orange"))))
- '(org-scheduled-today ((t (:foreground "Orange"))))
- '(org-special-keyword ((t (:foreground "Plum3"))))
- '(org-tag ((t (:foreground "SteelBLue1"))))
- '(org-todo ((t (:foreground "Firebrick2" :bold t))) t)
- '(swiper-line-face ((t (:background "forestgreen"))))
- '(swiper-match-face-3 ((t (:foreground "white" :background "darkorange")))))

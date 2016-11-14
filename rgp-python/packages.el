@@ -9,8 +9,7 @@
 ;;
 ;;; License: GPLv3
 
-(defconst rgp-python-packages
-  '(python))
+(defconst rgp-python-packages '(python))
 
 (defun rgp-python/init-python ()
   (use-package python

@@ -9,7 +9,9 @@
 ;;
 ;;; License: GPLv3
 
-(defun rgp-yasnippet/init-yasnippet ()
+(defconst rgp-yasnippet-packages '(yasnippet))
+
+(defun rgp-yasnippet/post-init-yasnippet ()
   (use-package yasnippet
     :config
     (progn
@@ -24,9 +26,4 @@
                      ad-do-it)))))
 
       (yas-advise-indent-function 'indent-for-tab-command)
-      (add-hook 'nxml-mode-hook
-                (let ((original-command (lookup-key nxml-mode-map [tab])))
-                  `(lambda ()
-                     (setq yas-fallback-behavior
-                           '(apply ,original-command))
-                     (local-set-key [tab] 'yas-expand)))))))
+      )))

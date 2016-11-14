@@ -20,13 +20,14 @@
                  "org directory in Windows and my life laptop"))
 (when virtualbox-p (defvar org-dir "/media/e/dropbox/org/"
                      "org directory in my Virtual Box Debian"))
+(defconst rgp-org-packages '(org-mode))
 
 (defun open-agenda-file ()
   "Open agenda.org file"
   (interactive)
   (find-file (expand-file-name "agenda.org" org-dir)))
 
-(defun rgp-org/init-org ()
+(defun rgp-org/post-init-org-mode ()
   "Initialize rgp-org"
   (use-package org
     :defer t

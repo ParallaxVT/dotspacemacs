@@ -9,11 +9,13 @@
 ;;
 ;;; License: GPLv3
 
-(defun rgp-flyspell/init-flyspell()
+(defconst rgp-flyspell-packages '(flyspell))
+
+(defun rgp-flyspell/post-init-flyspell()
   (use-package flyspell
     :defer t
-    :preface
-    (add-to-list 'exec-path "C:/Program Files (x86)/Aspell/bin/")
-    (setq-default ispell-program-name "aspell")
+    :config
+    (setq-default enable-flyspell-auto-completion= t)
+    (setq-default ispell-dictionary "english")
     (setq-default ispell-extra-args '("--sug-mode=fast"))
-    (setq-default ispell-dictionary "english")))
+    (setq-default spell-checking-enable-by-default nil)))

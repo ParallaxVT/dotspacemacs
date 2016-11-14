@@ -9,7 +9,9 @@
 ;;
 ;;; License: GPLv3
 
-(defun rgp-multi-term/init-multi-term ()
+(defconst rgp-multi-term-packages '(multi-term))
+
+(defun rgp-multi-term/post-init-multi-term ()
   (use-package multi-term
     :commands multi-term
     :defer t
