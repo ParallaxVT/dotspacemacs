@@ -143,7 +143,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
   ;; ====================================================================
   (global-set-key (kbd "M-SPC") 'evil-normal-state)
   (global-set-key (kbd "M-<RET>") 'company-yasnippet)
-  (global-set-key (kbd "C-c c") 'Insert-GforcesCar)
   (global-set-key (kbd "C-c c") 'company-complete)
   (evil-leader/set-key "w <RET>" 'delete-other-windows)
   (evil-leader/set-key "oa" 'duplicate-line-above)
@@ -151,6 +150,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (evil-leader/set-key "oc" 'cleanup-buffer)
   (evil-leader/set-key "og" 'open-agenda-file)
   (evil-leader/set-key "oh" 'start-helm-ag)
+  (evil-leader/set-key "oi" 'Insert-GforcesCar)
   (evil-leader/set-key "ol" 'align-regexp)
   (evil-leader/set-key "oo" 'smart-switch-to-previous-buffer)
   (evil-leader/set-key "or" 'rotate-text)
