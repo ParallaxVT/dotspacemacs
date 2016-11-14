@@ -1,0 +1,13 @@
+#name : Article
+#key : art
+#contributor: Parallax <hello@parallaxvirtualtours.co.uk>
+# --
+status:published
+slug:$0
+title:
+date:2016-11-22
+category:
+tags:
+summary:
+description:150characteres
+social_image:.jpg

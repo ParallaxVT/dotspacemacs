@@ -1,0 +1,5 @@
+#name : Link
+#key : link
+#contributor: Parallax <hello@parallaxvirtualtours.co.uk>
+# --
+[${1:Link Text}](${2:URL} $3){target="_blank"}$0
