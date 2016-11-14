@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: hide="y"
+# key: hd
+# --
+hide="y"$0

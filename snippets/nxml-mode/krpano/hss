@@ -1,6 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: hotspot loadstyle
-# key: hss
-# binding: direct-keybinding
-# --
-hotspot[$1].loadstyle($2);

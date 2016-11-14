@@ -1,5 +1,5 @@
-# contributor: Rafaelguerrapaz
-# name: add hotspot
+# -*- mode: snippet -*-
+# name: addhotspot(...);
 # key: addhs
 # --
 addhotspot($1);

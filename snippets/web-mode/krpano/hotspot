@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: hotspot[---]---.,---
+# key: hs
+# --
+hotspot[$1].$2,$0

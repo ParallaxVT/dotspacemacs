@@ -1,5 +1,5 @@
-# contributor: Rafaelguerrapaz
-# name: for
+# -*- mode: snippet -*-
+# name: for(set(i,0), i LE ..., inc(i), ...);
 # key: for
 # --
 <!--for(set(i,0), i LE 'number', 'next action to be called', 'loop action separated by comas');-->

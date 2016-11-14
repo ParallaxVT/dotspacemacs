@@ -1,5 +1,5 @@
-# contributor: Rafaelguerrapaz
-# name: add plugin
+# -*- mode: snippet -*-
+# name: addplugin(...);
 # key: addpl
 # --
 addplugin(${1:var});

@@ -1,5 +1,5 @@
-# contributor: Rafaelguerrapaz
-# name: add plugin textfield
+# -*- mode: snippet -*-
+# name: addplugin(...); textfield
 # key: addpltxt
 # --
 addplugin(${1:var});

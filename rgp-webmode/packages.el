@@ -13,7 +13,7 @@
 
 (defun rgp-webmode/init-web-mode ()
   (use-package web-mode
-    :mode "\\.\\(html\\|css\\)\\'"
+    :mode "\\.\\(html\\|css\\|xml\\)\\'"
     :defer t
     :config
     (progn

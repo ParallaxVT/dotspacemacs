@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tween(layer[---].---,.5,easeoutquad);
+# key: twla
+# --
+tween(layer[$1].${2:$$(yas-choose-value '("alpha" "visible" "x" "y"))},$0,.5,easeoutquad);

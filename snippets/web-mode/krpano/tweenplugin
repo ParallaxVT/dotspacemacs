@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tween(plugin[---].---,---,.5,easeoutquad);
+# key: twpl
+# --
+tween(plugin[$1].$2,$0,.5,easeoutquad);
