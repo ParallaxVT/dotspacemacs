@@ -21,7 +21,7 @@ values."
      ivy
      markdown
      org
-     ;;python
+     python
      shell ;; Required
      spell-checking
      version-control
