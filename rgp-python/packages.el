@@ -11,7 +11,7 @@
 
 (defconst rgp-python-packages '(python))
 
-(defun rgp-python/init-python ()
+(defun rgp-python/post-init-python ()
   (use-package python
     :defer t
     :config
