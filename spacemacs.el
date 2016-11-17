@@ -138,6 +138,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (add-to-list 'company-backends 'company-krpano)
   ;; Fix spacemacs take ages to startup
   (setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+  ;; Fix persp-mode bug closing Emacs
+  (setq-default persp-auto-save-opt 0)
  ;; ====================================================================
   ;; Keybindings
   ;; ====================================================================
