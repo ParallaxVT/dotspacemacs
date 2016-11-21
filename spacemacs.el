@@ -37,7 +37,6 @@ values."
      rgp-python
      rgp-rotate-text
      rgp-webmode
-     rgp-yasnippet
      )
    dotspacemacs-additional-packages '(
                                       bookmark+
